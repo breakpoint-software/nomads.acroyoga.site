@@ -1,1 +1,24 @@
-<p>contact-us works!</p>
+<div class="container">
+  <mat-card class="card-contact">
+    <mat-card-header>
+      <div mat-card-avatar class=""><mat-icon>email</mat-icon></div>
+      <mat-card-title>Contact us</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <input placeholder="Name" type="text" value="" required />
+      <input
+        placeholder="Email address"
+        type="email"
+        onblur="this.setAttribute('value', this.value);"
+        value=""
+        required
+      />
+      <span class="validation-text">Please enter a valid email address.</span>
+
+      <div class="flex">
+        <textarea placeholder="Message" rows="3" required></textarea>
+      </div>
+      <button>Send</button>
+    </mat-card-content>
+  </mat-card>
+</div>

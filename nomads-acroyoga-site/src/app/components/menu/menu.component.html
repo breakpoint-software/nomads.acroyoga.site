@@ -3,11 +3,11 @@
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
-    <span>Nomads acroyoga</span>
+    <span class="toolbar-text">Nomads acroyoga</span>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav #sidenav>
+  <mat-sidenav #sidenav fixedInViewport="true">
     <mat-nav-list>
       <a mat-list-item [routerLink]="'/home'" (click)="sidenav.toggle()">
         Home
@@ -24,7 +24,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 88vh;">
+    <div style="height: 100vh; scroll-behavior: unset">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

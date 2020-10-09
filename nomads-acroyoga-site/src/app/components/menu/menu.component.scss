@@ -1,0 +1,20 @@
+.mat-drawer-content {
+  overflow: hidden;
+}
+.mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000;
+}
+.mat-sidenav {
+  padding-top: 60px;
+}
+
+.toolbar-text {
+  font-family: AndelliaDavilton !important;
+  font-size: 2.2em;
+}
+.mat-toolbar.mat-primary {
+  background-color: #731c46;
+}
