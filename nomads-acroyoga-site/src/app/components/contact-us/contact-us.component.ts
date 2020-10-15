@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MailerService } from 'src/app/services/mailer.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -10,7 +10,7 @@ export class ContactUsComponent implements OnInit {
   email: string;
   message: string;
 
-  constructor() {}
+  constructor(private mailservice: MailerService) {}
 
   ngOnInit(): void {}
 }
