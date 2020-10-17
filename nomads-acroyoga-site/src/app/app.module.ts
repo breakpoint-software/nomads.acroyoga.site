@@ -9,16 +9,38 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-
+import * as data from '../assets/email/credentials.json'
+import { calendar_v3, google, GoogleApis } from 'googleapis';
+import { MailerService } from './services/mailer.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, HomeComponent, MenuComponent, AboutUsComponent, ContactUsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: google.authentication.OAuth2Client,
+    //   useValue: new google.authentication.OAuth2Client(
+    // // You get this in GCP project credentials
+    //     data.web.client_id,
+    //     data.web.client_secret,
+    // // URL where you'll handle succesful authentication
+    // ''    
+    //     )
+    // },
+    // {
+    //   provide: calendar_v3.Calendar,
+    //   useFactory: (auth: OAuth2Client) => {
+    //     return new calendar_v3.Calendar({ auth });
+    //   } ,
+    //   deps: [google.authentication.OAuth2Client],
+    // },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
