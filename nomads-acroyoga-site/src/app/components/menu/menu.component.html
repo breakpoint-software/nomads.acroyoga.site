@@ -4,6 +4,9 @@
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
     <span class="toolbar-text">Nomads acroyoga</span>
+    <!-- <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">instagram</mat-icon>
+    </button> -->
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
@@ -24,7 +27,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 100vh; scroll-behavior: unset">
+    <div style=" scroll-behavior: unset">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
