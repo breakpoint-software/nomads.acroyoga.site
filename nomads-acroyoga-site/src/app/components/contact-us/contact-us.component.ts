@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { calendar_v3, google } from 'googleapis';
 import { Mail } from 'src/app/model/mail';
-import { MailerService } from 'src/app/services/mailer.service';
+import { MailerService } from 'src/app/services/mail/mailer.service';
 import * as googleCred from '../../../assets/email/credentials.json'
 
 @Component({

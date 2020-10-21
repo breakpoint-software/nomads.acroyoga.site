@@ -5,14 +5,14 @@ $width: 100%;
 $cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
 @media (min-width: 320px) {
   .container {
-    width: 90%;
-    height: 100vh;
+    height: calc(100vh - 150px);
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
     background-image: url(../../../assets/img/background-text.svg);
     background-size: cover;
-    align-items: center;
+    overflow: auto;
   }
   .card-contact {
     max-width: 750px;

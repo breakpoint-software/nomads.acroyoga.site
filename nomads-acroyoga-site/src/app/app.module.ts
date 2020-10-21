@@ -10,9 +10,9 @@ import { MaterialModule } from './material.module';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import * as data from '../assets/email/credentials.json'
-import { calendar_v3, google, GoogleApis } from 'googleapis';
-import { MailerService } from './services/mailer.service';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleApiModule } from 'ng-gapi';
+import { GapiModule } from './gapi.module';
 @NgModule({
   declarations: [AppComponent, HomeComponent, MenuComponent, AboutUsComponent, ContactUsComponent],
   imports: [
@@ -20,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    GapiModule
   ],
   providers: [
     // {

@@ -1,7 +1,7 @@
 .background-text {
   background-image: url(../../../assets/img/background-text.svg);
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 150px);
   padding: 40px;
   overflow: auto;
 }
@@ -10,4 +10,10 @@
   font-family: "nouvelle vague";
   font-weight: normal;
   font-size: 1.4em;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+br {
+  line-height: 2;
 }
