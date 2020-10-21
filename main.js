@@ -161,9 +161,16 @@ class HomeComponent {
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 1, vars: 0, consts: [[1, "logo"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "div", 0);
-    } }, styles: [".logo[_ngcontent-%COMP%] {\n  height: calc(100vh - 150px);\n  background-image: url('logo-transparente.png');\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: contain;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwyQkFBQTtFQUNBLDhDQUFBO0VBQ0EsMkJBQUE7RUFDQSw0QkFBQTtFQUNBLHdCQUFBO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2dvIHtcclxuICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAxNTBweCk7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uLy4uLy4uL2Fzc2V0cy9pbWcvbG9nby10cmFuc3BhcmVudGUucG5nKTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvbnRhaW47XHJcbn1cclxuIl19 */"] });
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 5, vars: 0, consts: [[1, "logo"], [1, "slogam"], [1, "slogam-text"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Jump into the void and be confident...");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: [".logo[_ngcontent-%COMP%] {\n  height: calc(100vh - 150px);\n  background-image: url('logo-transparente.png');\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: contain;\n  background-attachment: fixed;\n  z-index: 1;\n}\n\n.slogam[_ngcontent-%COMP%] {\n  height: 100vh;\n  width: 100%;\n  background-image: url('textura-texto-hojas.svg');\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  opacity: 0.8;\n  align-items: center;\n  text-align: center;\n}\n\n.slogam-text[_ngcontent-%COMP%] {\n  font-size: 5em;\n  padding-top: 50vh;\n  font-family: AndelliaDavilton;\n  font-weight: bolder;\n  line-height: 1.1;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwyQkFBQTtFQUNBLDhDQUFBO0VBQ0EsMkJBQUE7RUFDQSw0QkFBQTtFQUNBLHdCQUFBO0VBQ0EsNEJBQUE7RUFDQSxVQUFBO0FBQ0Y7O0FBRUE7RUFDRSxhQUFBO0VBQ0EsV0FBQTtFQUNBLGdEQUFBO0VBQ0EsMkJBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7QUFDRjs7QUFFQTtFQUNFLGNBQUE7RUFDQSxpQkFBQTtFQUVBLDZCQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtBQUFGIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9nbyB7XHJcbiAgaGVpZ2h0OiBjYWxjKDEwMHZoIC0gMTUwcHgpO1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi8uLi9hc3NldHMvaW1nL2xvZ28tdHJhbnNwYXJlbnRlLnBuZyk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xyXG4gIGJhY2tncm91bmQtYXR0YWNobWVudDogZml4ZWQ7XHJcbiAgei1pbmRleDogMTtcclxufVxyXG5cclxuLnNsb2dhbSB7XHJcbiAgaGVpZ2h0OiAxMDB2aDtcclxuICB3aWR0aDogMTAwJTtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLi4vLi4vLi4vYXNzZXRzL2ltZy90ZXh0dXJhLXRleHRvLWhvamFzLnN2Zyk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBvcGFjaXR5OiAwLjg7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5zbG9nYW0tdGV4dCB7XHJcbiAgZm9udC1zaXplOiA1ZW07XHJcbiAgcGFkZGluZy10b3A6IDUwdmg7XHJcbiAgLy8gYm90dG9tOiAxMHB4O1xyXG4gIGZvbnQtZmFtaWx5OiBBbmRlbGxpYURhdmlsdG9uO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XHJcbiAgbGluZS1oZWlnaHQ6IDEuMTtcclxuICAvLyBwb3NpdGlvbjogZml4ZWQ7XHJcbn1cclxuIl19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HomeComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -239,45 +246,6 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
 
 /***/ }),
 
-/***/ "XJ+S":
-/*!********************************************!*\
-  !*** ./src/app/services/mailer.service.ts ***!
-  \********************************************/
-/*! exports provided: MailerService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MailerService", function() { return MailerService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/email/credentials.json */ "9M1M");
-var _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../assets/email/credentials.json */ "9M1M", 1);
-/* harmony import */ var _shared_apiservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/apiservice.service */ "uK48");
-
-
-
-
-class MailerService {
-    constructor(apiService) {
-        this.apiService = apiService;
-        this.credentials = _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_1___namespace;
-    }
-    sendMail(mail) {
-        this.apiService.sendPost('mail', 'send', mail);
-    }
-}
-MailerService.ɵfac = function MailerService_Factory(t) { return new (t || MailerService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_shared_apiservice_service__WEBPACK_IMPORTED_MODULE_2__["ApiserviceService"])); };
-MailerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: MailerService, factory: MailerService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MailerService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root',
-            }]
-    }], function () { return [{ type: _shared_apiservice_service__WEBPACK_IMPORTED_MODULE_2__["ApiserviceService"] }]; }, null); })();
-
-
-/***/ }),
-
 /***/ "ZAI4":
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
@@ -299,6 +267,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/about-us/about-us.component */ "ukFw");
 /* harmony import */ var _components_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/contact-us/contact-us.component */ "pO+s");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _gapi_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./gapi.module */ "eUgs");
+
 
 
 
@@ -337,13 +307,15 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
             _material_module__WEBPACK_IMPORTED_MODULE_7__["MaterialModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
+            _gapi_module__WEBPACK_IMPORTED_MODULE_11__["GapiModule"]
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _components_menu_menu_component__WEBPACK_IMPORTED_MODULE_5__["MenuComponent"], _components_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_8__["AboutUsComponent"], _components_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_9__["ContactUsComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
         _material_module__WEBPACK_IMPORTED_MODULE_7__["MaterialModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"]] }); })();
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
+        _gapi_module__WEBPACK_IMPORTED_MODULE_11__["GapiModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -353,7 +325,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
                     _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
                     _material_module__WEBPACK_IMPORTED_MODULE_7__["MaterialModule"],
-                    _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"]
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
+                    _gapi_module__WEBPACK_IMPORTED_MODULE_11__["GapiModule"]
                 ],
                 providers: [
                 // {
@@ -381,6 +354,110 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 
 /***/ }),
 
+/***/ "eUgs":
+/*!********************************!*\
+  !*** ./src/app/gapi.module.ts ***!
+  \********************************/
+/*! exports provided: GapiModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GapiModule", function() { return GapiModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var ng_gapi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng-gapi */ "4dwI");
+
+
+
+
+let gapiClientConfig = {
+    client_id: "212863676403-s969j469fm0ejbtrq21274qm7224qd9j.apps.googleusercontent.com",
+    discoveryDocs: ["https://analyticsreporting.googleapis.com/$discovery/rest?version=v4"],
+    scope: [
+        "https://www.googleapis.com/auth/gmail.send",
+        "https://www.googleapis.com/auth/gmail.compose"
+    ].join(" ")
+};
+class GapiModule {
+}
+GapiModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: GapiModule });
+GapiModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function GapiModule_Factory(t) { return new (t || GapiModule)(); }, imports: [[
+            //...
+            ng_gapi__WEBPACK_IMPORTED_MODULE_1__["GoogleApiModule"].forRoot({
+                provide: ng_gapi__WEBPACK_IMPORTED_MODULE_1__["NG_GAPI_CONFIG"],
+                useValue: gapiClientConfig
+            }),
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](GapiModule, { imports: [ng_gapi__WEBPACK_IMPORTED_MODULE_1__["GoogleApiModule"]] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GapiModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [
+                    //...
+                    ng_gapi__WEBPACK_IMPORTED_MODULE_1__["GoogleApiModule"].forRoot({
+                        provide: ng_gapi__WEBPACK_IMPORTED_MODULE_1__["NG_GAPI_CONFIG"],
+                        useValue: gapiClientConfig
+                    }),
+                ]
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "fSPL":
+/*!*************************************************!*\
+  !*** ./src/app/services/mail/mailer.service.ts ***!
+  \*************************************************/
+/*! exports provided: MailerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MailerService", function() { return MailerService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/email/credentials.json */ "9M1M");
+var _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../../assets/email/credentials.json */ "9M1M", 1);
+/* harmony import */ var _shared_apiservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/apiservice.service */ "uK48");
+/* harmony import */ var ng_gapi__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng-gapi */ "4dwI");
+
+
+
+
+
+class MailerService {
+    constructor(apiService, gApi) {
+        this.apiService = apiService;
+        this.gApi = gApi;
+        this.credentials = _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_1___namespace;
+    }
+    sendMail(mail) {
+        debugger;
+        Email.send({
+            Host: 'smtp.gmail.com',
+            Port: 587,
+            Username: 'breakpoint.software@gmail.com',
+            Password: 'amgrvs87',
+            To: 'acroyoga.nomads@gmail.com',
+            From: 'breakpoint.software@gmail.com',
+            Subject: 'subject test',
+            Body: '  <i>This is sent as a feedback from my resume page.</i> <br/> <b>Name: </b><br><br> <b>~End of Message.~</b>'
+        }).then(message => { alert(message); });
+        // this.apiService.sendPost<Mail>('mail', 'send', mail);    
+    }
+}
+MailerService.ɵfac = function MailerService_Factory(t) { return new (t || MailerService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_shared_apiservice_service__WEBPACK_IMPORTED_MODULE_2__["ApiserviceService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ng_gapi__WEBPACK_IMPORTED_MODULE_3__["GoogleApiService"])); };
+MailerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: MailerService, factory: MailerService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MailerService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root',
+            }]
+    }], function () { return [{ type: _shared_apiservice_service__WEBPACK_IMPORTED_MODULE_2__["ApiserviceService"] }, { type: ng_gapi__WEBPACK_IMPORTED_MODULE_3__["GoogleApiService"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "pO+s":
 /*!***************************************************************!*\
   !*** ./src/app/components/contact-us/contact-us.component.ts ***!
@@ -395,7 +472,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_model_mail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/model/mail */ "L0IO");
 /* harmony import */ var _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/email/credentials.json */ "9M1M");
 var _assets_email_credentials_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../../assets/email/credentials.json */ "9M1M", 1);
-/* harmony import */ var src_app_services_mailer_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/mailer.service */ "XJ+S");
+/* harmony import */ var src_app_services_mail_mailer_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/mail/mailer.service */ "fSPL");
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
 /* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
 
@@ -423,7 +500,7 @@ class ContactUsComponent {
         this.mailservice.sendMail(mail);
     }
 }
-ContactUsComponent.ɵfac = function ContactUsComponent_Factory(t) { return new (t || ContactUsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_mailer_service__WEBPACK_IMPORTED_MODULE_3__["MailerService"])); };
+ContactUsComponent.ɵfac = function ContactUsComponent_Factory(t) { return new (t || ContactUsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services_mail_mailer_service__WEBPACK_IMPORTED_MODULE_3__["MailerService"])); };
 ContactUsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactUsComponent, selectors: [["app-contact-us"]], decls: 17, vars: 0, consts: [[1, "container"], [1, "card-contact"], ["mat-card-avatar", "", 1, ""], ["placeholder", "Name", "type", "text", "value", "", "required", ""], ["placeholder", "Email address", "type", "email", "onblur", "this.setAttribute('value', this.value);", "value", "", "required", ""], [1, "validation-text"], [1, "flex"], ["placeholder", "Message", "rows", "3", "required", ""], [3, "click"]], template: function ContactUsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card", 1);
@@ -461,7 +538,7 @@ ContactUsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
                 templateUrl: './contact-us.component.html',
                 styleUrls: ['./contact-us.component.scss'],
             }]
-    }], function () { return [{ type: src_app_services_mailer_service__WEBPACK_IMPORTED_MODULE_3__["MailerService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_services_mail_mailer_service__WEBPACK_IMPORTED_MODULE_3__["MailerService"] }]; }, null); })();
 
 
 /***/ }),
