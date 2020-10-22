@@ -1,0 +1,16 @@
+{ 
+    "ApiSettings": [
+    {
+      "ApiName": "mail",
+      "ApiRoot": "https://mailsender20201021021819.azurewebsites.net/api/email/",
+      "EndPointNames": [
+        {
+          "Name": "send",
+          "EndPoint": "send",
+          "RequireAuthorization": false,
+          "UseCustomerProfile": false
+        }
+         ]
+    }
+    ]
+}
