@@ -730,43 +730,127 @@ ApiserviceService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsComponent", function() { return AboutUsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var ngx_device_detector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-device-detector */ "9YtQ");
+
+
 
 
 class AboutUsComponent {
-    constructor() { }
-    ngOnInit() {
+    constructor(sanitizer, deviceDetector) {
+        this.deviceDetector = deviceDetector;
+        this.videoUrl = sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/TpCxmvPI4G4');
+        this.isMobile = this.deviceDetector.isMobile();
     }
+    ngOnInit() { }
 }
-AboutUsComponent.ɵfac = function AboutUsComponent_Factory(t) { return new (t || AboutUsComponent)(); };
-AboutUsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AboutUsComponent, selectors: [["app-about-us"]], decls: 11, vars: 0, consts: function () { var i18n_0; if (typeof ngI18nClosureMode !== "undefined" && ngI18nClosureMode) {
-        const MSG_EXTERNAL_aboutUs$$SRC_APP_COMPONENTS_ABOUT_US_ABOUT_US_COMPONENT_TS_1 = goog.getMsg("{$startParagraph} Nomads acroyoga is a fusion of acrobatics, yoga and nomadic life. Acrobatics in acroyoga is considered as solar practice, this helps us develop self-confidence, together with the strength and fun of acrobatics. Yoga, the lunar part, helps us cultivate awareness in breathing, balance and connection. Nomadic life makes us discover new places and develop curiosity, adaptation and mental and emotional flexibility. {$closeParagraph}{$startParagraph} Acroyoga allows us to join a large global community through communication, movement, connection and play. {$closeParagraph}{$startParagraph} We talk about community because we practice it with other people. Being connected with other bodies promotes concentration, balance and confidence in others. {$closeParagraph}{$startParagraph} You do not need to be an expert in yoga or acrobatics to practice this discipline as there are postures that any beginner can perform. {$closeParagraph}{$startParagraph} To achieve success in this discipline, mutual help is needed that forces people to let go of control, fear, anxiety and free themselves from useless burdens. {$closeParagraph}{$startParagraph} But being able to do a balanced posture also requires utmost concentration and attention. This state of focus improves a greater awareness in the present, leaving distractions and anxiety aside. {$closeParagraph}{$startParagraph} Yoga, acrobatics and travel have a common basis: living in the present in balance with others. {$closeParagraph}{$startParagraph} We don't like to talk about levels: the great thing is that a good companion-base can allow us to fly if we have the courage to trust him/her. {$closeParagraph}{$startParagraph} Why should a couple practice acroyoga? This discipline can be considered a couple's therapy, because being in such close physical contact increases the desire to be more united; trust also plays a great role in this activity, and besides, with all these acrobatics in the air, both of them will have to trust each other to make every movement fluid and to avoid falling or getting hurt, you will be able to have a more effective communication in the couple without too much tension: so don't have any doubts, get out of the couple's routine and add this kind of activity that will unite you and make you feel healthier. {$closeParagraph}", { "startParagraph": "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]", "closeParagraph": "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" });
-        i18n_0 = MSG_EXTERNAL_aboutUs$$SRC_APP_COMPONENTS_ABOUT_US_ABOUT_US_COMPONENT_TS_1;
-    }
-    else {
-        i18n_0 = "\n " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    Nomads acroyoga is a fusion of acrobatics, yoga and nomadic life. Acrobatics\n    in acroyoga is considered as solar practice, this helps us develop\n    self-confidence, together with the strength and fun of acrobatics. Yoga, the\n    lunar part, helps us cultivate awareness in breathing, balance and\n    connection. Nomadic life makes us discover new places and develop curiosity,\n    adaptation and mental and emotional flexibility.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    Acroyoga allows us to join a large global community through communication,\n    movement, connection and play.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    We talk about community because we practice it with other people. Being\n    connected with other bodies promotes concentration, balance and confidence\n    in others.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    You do not need to be an expert in yoga or acrobatics to practice this\n    discipline as there are postures that any beginner can perform.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    To achieve success in this discipline, mutual help is needed that forces\n    people to let go of control, fear, anxiety and free themselves from useless\n    burdens.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    But being able to do a balanced posture also requires utmost concentration\n    and attention. This state of focus improves a greater awareness in the\n    present, leaving distractions and anxiety aside.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    Yoga, acrobatics and travel have a common basis: living in the present in\n    balance with others.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    We don't like to talk about levels: the great thing is that a good\n    companion-base can allow us to fly if we have the courage to trust him/her.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "\n  " + "[\uFFFD#2\uFFFD|\uFFFD#3\uFFFD|\uFFFD#4\uFFFD|\uFFFD#5\uFFFD|\uFFFD#6\uFFFD|\uFFFD#7\uFFFD|\uFFFD#8\uFFFD|\uFFFD#9\uFFFD|\uFFFD#10\uFFFD]" + "\n    Why should a couple practice acroyoga? This discipline can be considered a\n    couple's therapy, because being in such close physical contact increases the\n    desire to be more united; trust also plays a great role in this activity,\n    and besides, with all these acrobatics in the air, both of them will have to\n    trust each other to make every movement fluid and to avoid falling or\n    getting hurt, you will be able to have a more effective communication in the\n    couple without too much tension: so don't have any doubts, get out of the\n    couple's routine and add this kind of activity that will unite you and make\n    you feel healthier.\n  " + "[\uFFFD/#2\uFFFD|\uFFFD/#3\uFFFD|\uFFFD/#4\uFFFD|\uFFFD/#5\uFFFD|\uFFFD/#6\uFFFD|\uFFFD/#7\uFFFD|\uFFFD/#8\uFFFD|\uFFFD/#9\uFFFD|\uFFFD/#10\uFFFD]" + "  ";
-    } i18n_0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nPostprocess"](i18n_0); return [[1, "background-text"], i18n_0, [1, "about-us"]]; }, template: function AboutUsComponent_Template(rf, ctx) { if (rf & 1) {
+AboutUsComponent.ɵfac = function AboutUsComponent_Factory(t) { return new (t || AboutUsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_device_detector__WEBPACK_IMPORTED_MODULE_2__["DeviceDetectorService"])); };
+AboutUsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AboutUsComponent, selectors: [["app-about-us"]], decls: 64, vars: 1, consts: [[1, "background-text"], [1, "text-container"], [1, "about-us"], [1, "videoContainer"], ["width", "100%", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media;\n      gyroscope; picture-in-picture", "allowfullscreen", "", 3, "src"], [1, "therapy"], [1, "therapy-photo"], [1, "therapy-text"]], template: function AboutUsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nStart"](1, 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "p", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵi18nEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Hi guys!! Thanks for joining us. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "We are ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Nomads - Acroyoga");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: [".background-text[_ngcontent-%COMP%] {\n  background-image: url('background-text.svg');\n  background-size: cover;\n  height: calc(100vh - 150px);\n  padding: 40px;\n  overflow: auto;\n}\n\n.about-us[_ngcontent-%COMP%] {\n  font-family: \"nouvelle vague\";\n  font-weight: normal;\n  font-size: 1.4em;\n  text-align: justify;\n  line-height: 1.2;\n}\n\nbr[_ngcontent-%COMP%] {\n  line-height: 2;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hYm91dC11cy9hYm91dC11cy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDRDQUFBO0VBQ0Esc0JBQUE7RUFDQSwyQkFBQTtFQUNBLGFBQUE7RUFDQSxjQUFBO0FBQ0Y7O0FBRUE7RUFDRSw2QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxjQUFBO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhY2tncm91bmQtdGV4dCB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uLy4uLy4uL2Fzc2V0cy9pbWcvYmFja2dyb3VuZC10ZXh0LnN2Zyk7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAxNTBweCk7XHJcbiAgcGFkZGluZzogNDBweDtcclxuICBvdmVyZmxvdzogYXV0bztcclxufVxyXG5cclxuLmFib3V0LXVzIHtcclxuICBmb250LWZhbWlseTogXCJub3V2ZWxsZSB2YWd1ZVwiO1xyXG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbiAgZm9udC1zaXplOiAxLjRlbTtcclxuICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xyXG4gIGxpbmUtaGVpZ2h0OiAxLjI7XHJcbn1cclxuXHJcbmJyIHtcclxuICBsaW5lLWhlaWdodDogMjtcclxufVxyXG4iXX0= */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, ": a fusion of acrobatics, yoga and nomadic life. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "i");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "ACROBATICS");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " in acroyoga is considered as a solar practice, this helps us develop self-confidence, together with the strength and fun of acrobatics. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "i");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "YOGA");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, ", the lunar part, helps us cultivate awareness in breathing, balance and connection. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "i");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "NOMADIC LIFE");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " makes us discover new places and develop curiosity, adaptation, mental and emotional flexibility. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " Take a look at our launch video. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "iframe", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " Acroyoga is a large ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "global community");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, ". Regardless of your location, skill-level, or income, we will provide a safe, fun and empowering practice for you and your partners. AcroYoga supports physical health, clear and kind communication, creative potential, and human connection. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " We talk about ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "community");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " because we practice it with other people. Being connected with other bodies promotes concentration, balance and confidence in others. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, " NO WORRIES!!! You do not need to be an expert in yoga or acrobatics to practice this discipline as there are postures that any beginner can perform. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, " To achieve success in this discipline, ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "mutual help is needed that forces people to let go of control, fear, anxiety and free themselves from useless burdens.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " Doing a balanced posture requires utmost concentration and attention. This state of focus improves a ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "greater awareness in the present, leaving distractions and anxiety aside.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, " WHAT WE LOVE about Yoga, acrobatics and travel is that they have a common ground: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, " living in the present in balance with others.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](51, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](52, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](53, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "span", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "Acroyoga as a couple's therapy ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](56, "hr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](57, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, " Why should a couple practice acroyoga? Being in such close physical contact increases the desire to be more united; trust also plays a great role in this activity, and besides, with all these acrobatics in the air, both the partners will have to trust each other to make every movement fluid and nice. The couple will have a more effective communication without too much tension: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "i");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, "\"so don't have any doubts, get out of the couple's routine and add this kind of activity that will unite you and make you feel healthier.\"");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](63, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx.videoUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeResourceUrl"]);
+    } }, styles: [".background-text[_ngcontent-%COMP%] {\n  background-image: url('textura-texto-foto-manchas.svg');\n  background-size: cover;\n  height: calc(100vh);\n  top: 56px;\n  padding: 0 30px;\n  overflow: auto;\n}\n\n.text-container[_ngcontent-%COMP%] {\n  background: rgba(227, 164, 159, 0.4);\n  height: auto;\n  padding: 40px 10px;\n  min-height: 100vh;\n}\n\np[_ngcontent-%COMP%], .therapy-text[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-family: \"nouvelle vague\";\n  font-weight: normal;\n  font-size: 1.4em;\n  text-align: justify;\n  line-height: 1.2;\n}\n\n.therapy[_ngcontent-%COMP%] {\n  font-family: \"nouvelle vague\";\n  font-weight: bolder !important;\n  font-style: italic !important;\n  font-size: 1.6em !important;\n  text-align: justify;\n  line-height: 1.2;\n}\n\n.therapy-photo[_ngcontent-%COMP%] {\n  background-image: url('therapy-photo.JPG');\n  background-size: contain;\n  height: 146px;\n  width: 220px;\n  border-top: solid 10px;\n  border-left: solid 10px;\n  border-right: solid 10px;\n  border-bottom: solid 30px;\n  border-color: white;\n  background-repeat: no-repeat;\n  display: block;\n  float: left;\n}\n\n.therapy-text[_ngcontent-%COMP%] {\n  display: block;\n  float: right;\n  width: calc(100vw - 370px);\n}\n\nhr[_ngcontent-%COMP%] {\n  border: solid 0.5px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hYm91dC11cy9hYm91dC11cy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVEQUFBO0VBQ0Esc0JBQUE7RUFDQSxtQkFBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0VBQ0EsY0FBQTtBQUNGOztBQUVBO0VBQ0Usb0NBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTtBQUNGOztBQUNBOztFQUVFLDZCQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUFFRjs7QUFBQTtFQUNFLDZCQUFBO0VBQ0EsOEJBQUE7RUFDQSw2QkFBQTtFQUNBLDJCQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQkFBQTtBQUdGOztBQURBO0VBQ0UsMENBQUE7RUFDQSx3QkFBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLHdCQUFBO0VBQ0EseUJBQUE7RUFDQSxtQkFBQTtFQUNBLDRCQUFBO0VBQ0EsY0FBQTtFQUNBLFdBQUE7QUFJRjs7QUFGQTtFQUNFLGNBQUE7RUFDQSxZQUFBO0VBQ0EsMEJBQUE7QUFLRjs7QUFGQTtFQUNFLG1CQUFBO0FBS0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhY2tncm91bmQtdGV4dCB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uLy4uLy4uL2Fzc2V0cy9pbWcvdGV4dHVyYS10ZXh0by1mb3RvLW1hbmNoYXMuc3ZnKTtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gIGhlaWdodDogY2FsYygxMDB2aCk7XHJcbiAgdG9wOiA1NnB4O1xyXG4gIHBhZGRpbmc6IDAgMzBweDtcclxuICBvdmVyZmxvdzogYXV0bztcclxufVxyXG5cclxuLnRleHQtY29udGFpbmVyIHtcclxuICBiYWNrZ3JvdW5kOiByZ2JhKDIyNywgMTY0LCAxNTksIDAuNCk7XHJcbiAgaGVpZ2h0OiBhdXRvO1xyXG4gIHBhZGRpbmc6IDQwcHggMTBweDtcclxuICBtaW4taGVpZ2h0OiAxMDB2aDtcclxufVxyXG5wLFxyXG4udGhlcmFweS10ZXh0IHNwYW4ge1xyXG4gIGZvbnQtZmFtaWx5OiBcIm5vdXZlbGxlIHZhZ3VlXCI7XHJcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcclxuICBmb250LXNpemU6IDEuNGVtO1xyXG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XHJcbiAgbGluZS1oZWlnaHQ6IDEuMjtcclxufVxyXG4udGhlcmFweSB7XHJcbiAgZm9udC1mYW1pbHk6IFwibm91dmVsbGUgdmFndWVcIjtcclxuICBmb250LXdlaWdodDogYm9sZGVyICFpbXBvcnRhbnQ7XHJcbiAgZm9udC1zdHlsZTogaXRhbGljICFpbXBvcnRhbnQ7XHJcbiAgZm9udC1zaXplOiAxLjZlbSAhaW1wb3J0YW50O1xyXG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XHJcbiAgbGluZS1oZWlnaHQ6IDEuMjtcclxufVxyXG4udGhlcmFweS1waG90byB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uLy4uLy4uL2Fzc2V0cy9pbWcvdGhlcmFweS1waG90by5KUEcpO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcclxuICBoZWlnaHQ6IDE0NnB4O1xyXG4gIHdpZHRoOiAyMjBweDtcclxuICBib3JkZXItdG9wOiBzb2xpZCAxMHB4O1xyXG4gIGJvcmRlci1sZWZ0OiBzb2xpZCAxMHB4O1xyXG4gIGJvcmRlci1yaWdodDogc29saWQgMTBweDtcclxuICBib3JkZXItYm90dG9tOiBzb2xpZCAzMHB4O1xyXG4gIGJvcmRlci1jb2xvcjogd2hpdGU7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBmbG9hdDogbGVmdDtcclxufVxyXG4udGhlcmFweS10ZXh0IHtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBmbG9hdDogcmlnaHQ7XHJcbiAgd2lkdGg6IGNhbGMoMTAwdncgLSAzNzBweCk7XHJcbn1cclxuXHJcbmhyIHtcclxuICBib3JkZXI6IHNvbGlkIDAuNXB4O1xyXG59XHJcbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AboutUsComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
                 selector: 'app-about-us',
                 templateUrl: './about-us.component.html',
-                styleUrls: ['./about-us.component.scss']
+                styleUrls: ['./about-us.component.scss'],
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return [{ type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"] }, { type: ngx_device_detector__WEBPACK_IMPORTED_MODULE_2__["DeviceDetectorService"] }]; }, null); })();
 
 
 /***/ }),
