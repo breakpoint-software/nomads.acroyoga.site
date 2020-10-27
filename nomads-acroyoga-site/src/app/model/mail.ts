@@ -1,5 +1,7 @@
-export class Mail  {
-    mailTo: string;
-    subject: string;
-    body: string;
+export class Mail {
+  replayTo: string;
+  mailTo: string;
+  subject: string;
+  body: string;
+  name: string;
 }

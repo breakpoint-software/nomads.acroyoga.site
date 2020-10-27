@@ -1,36 +1,47 @@
-import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import * as SiteSettings  from '../../../assets/settings/sitesettings.json';
+import * as SiteSettings from '../../../assets/settings/sitesettings.json';
 import { catchError, retry } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiserviceService {
   settings: SiteSetting;
-  constructor(private httpClient: HttpClient) { 
-    this.settings = JSON.parse(JSON.stringify(SiteSettings)) as SiteSetting
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      'Ocp-Apim-Trace': 'true',
+    }),
+  };
+  constructor(private httpClient: HttpClient) {
+    this.settings = JSON.parse(
+      JSON.stringify((SiteSettings as any).default)
+    ) as SiteSetting;
   }
-  
-  BuildApiEndPoint(apiName: string, endPointName: string){
-    let api = this.settings.ApiSettings.filter(e => e.ApiName == apiName);
-    if (api.length == 0)
-      throw new Error("Api does not exist");
-    let endPoint = api[0].EndPointNames.filter(e => e.Name == endPointName);
-    if (endPoint.length == 0)
-      throw new Error("endpoint  does not exist");
-    
+
+  BuildApiEndPoint(apiName: string, endPointName: string) {
+    let api = this.settings.ApiSettings.filter((e) => e.ApiName == apiName);
+    if (api.length == 0) throw new Error('Api does not exist');
+    let endPoint = api[0].EndPointNames.filter((e) => e.Name == endPointName);
+    if (endPoint.length == 0) throw new Error('endpoint  does not exist');
+
     return api[0].ApiRoot + endPoint[0].EndPoint;
   }
 
-  sendPost<T>(apiName: string, endPoint: string, body: T){
-    return this.httpClient.post<T>(this.BuildApiEndPoint(apiName, endPoint), body)
-    .pipe(
-      catchError(this.handleError)
-    );
+  sendPost<T>(apiName: string, endPoint: string, body: T): Observable<any> {
+    return this.httpClient
+      .post<T>(this.BuildApiEndPoint(apiName, endPoint), body, this.httpOptions)
+      .pipe(catchError(this.handleError));
   }
-  
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
@@ -39,29 +50,27 @@ export class ApiserviceService {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong.
       console.error(
-        `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
+        `Backend returned code ${error.status}, ` + `body was: ${error.error}`
+      );
     }
     // Return an observable with a user-facing error message.
-    return throwError(
-      'Something bad happened; please try again later.');
+    return throwError('Something bad happened; please try again later.');
   }
 }
 
-  export interface EndPointName {
-      Name: string;
-      EndPoint: string;
-      RequireAuthorization: boolean;
-      UseCustomerProfile: boolean;
-  }
+export interface EndPointName {
+  Name: string;
+  EndPoint: string;
+  RequireAuthorization: boolean;
+  UseCustomerProfile: boolean;
+}
 
-  export interface ApiSetting {
-      ApiName: string;
-      ApiRoot: string;
-      EndPointNames: EndPointName[];
-  }
+export interface ApiSetting {
+  ApiName: string;
+  ApiRoot: string;
+  EndPointNames: EndPointName[];
+}
 
-  export interface SiteSetting {
-      ApiSettings: ApiSetting[];
-  }
-
+export interface SiteSetting {
+  ApiSettings: ApiSetting[];
+}

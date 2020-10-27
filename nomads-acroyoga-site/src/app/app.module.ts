@@ -9,19 +9,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import * as data from '../assets/email/credentials.json'
+import * as data from '../assets/email/credentials.json';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleApiModule } from 'ng-gapi';
 import { GapiModule } from './gapi.module';
+import { FormsModule } from '@angular/forms';
+import { OurCoursesComponent } from './components/our-courses/our-courses.component';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MenuComponent, AboutUsComponent, ContactUsComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    MenuComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    OurCoursesComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    GapiModule
+    GapiModule,
+    FormsModule,
   ],
   providers: [
     // {
@@ -31,7 +41,7 @@ import { GapiModule } from './gapi.module';
     //     data.web.client_id,
     //     data.web.client_secret,
     // // URL where you'll handle succesful authentication
-    // ''    
+    // ''
     //     )
     // },
     // {
@@ -42,6 +52,6 @@ import { GapiModule } from './gapi.module';
     //   deps: [google.authentication.OAuth2Client],
     // },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

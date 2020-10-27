@@ -1,0 +1,26 @@
+.background-text {
+  background-image: url(../../../assets/img/background-text.svg);
+  background-size: cover;
+  height: calc(100vh);
+  top: 56px;
+  padding: 0 30px;
+  overflow: auto;
+}
+
+.text-container {
+  background: rgba(227, 164, 159, 0.1);
+  height: auto;
+  padding: 40px 10px;
+  min-height: 100vh;
+  p {
+    font-family: "nouvelle vague", sans-serif;
+    font-weight: normal;
+    font-size: 1.4em;
+    text-align: justify;
+    line-height: 1.2;
+  }
+}
+
+br {
+  line-height: 2;
+}

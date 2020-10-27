@@ -5,20 +5,49 @@
       <mat-card-title>Contact us</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <input placeholder="Name" type="text" value="" required />
       <input
+        name="name"
+        id="name"
+        placeholder="Name"
+        type="text"
+        required
+        [(ngModel)]="name"
+      />
+      <input
+        id="email"
+        name="email"
         placeholder="Email address"
         type="email"
         onblur="this.setAttribute('value', this.value);"
-        value=""
         required
+        [(ngModel)]="email"
       />
       <span class="validation-text">Please enter a valid email address.</span>
+      <input
+        name="subject"
+        id="subject"
+        placeholder="Subject"
+        type="text"
+        required
+        [(ngModel)]="subject"
+      />
 
       <div class="flex">
-        <textarea placeholder="Message" rows="3" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Message"
+          rows="3"
+          [(ngModel)]="message"
+          required
+        ></textarea>
       </div>
-      <button (click)="sendMail($event)"  >Send</button>
+      <button
+        (click)="sendMail($event)"
+        [disabled]="!(name != '' && email != '' && message != '')"
+      >
+        Send
+      </button>
     </mat-card-content>
   </mat-card>
 </div>

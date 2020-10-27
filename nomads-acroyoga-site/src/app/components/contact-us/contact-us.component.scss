@@ -10,21 +10,21 @@ $cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
     align-items: center;
     justify-content: center;
     padding: 40px;
-    background-image: url(../../../assets/img/background-text.svg);
+    background-image: url(../../../assets/img/textura-solo-imagen.jpg);
     background-size: cover;
     overflow: auto;
   }
   .card-contact {
     max-width: 750px;
     width: $width;
-    height: 280px;
+    height: 330px;
   }
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   font: inherit;
-  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out,
+  transition: transform 0.3s ease-in-out, font-size 0.6s ease-in-out,
     visibility 0.3s ease-in-out;
 }
 
@@ -138,6 +138,10 @@ button {
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+  &:disabled {
+    background-color: gray;
+    opacity: 0.5;
   }
 }
 

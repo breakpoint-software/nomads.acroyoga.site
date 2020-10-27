@@ -18,16 +18,20 @@
       <a mat-list-item [routerLink]="'/about-us'" (click)="sidenav.toggle()">
         About us
       </a>
-      <a mat-list-item [routerLink]="'/contact-us'" (click)="sidenav.toggle()">
-        Ccntact us
+      <a mat-list-item [routerLink]="'/our-courses'" (click)="sidenav.toggle()">
+        Our courses
       </a>
+      <a mat-list-item [routerLink]="'/contact-us'" (click)="sidenav.toggle()">
+        Contact us
+      </a>
+
       <!-- <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item
         >Close</a
       > -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style=" scroll-behavior: unset">
+    <div style="scroll-behavior: unset">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
