@@ -1,38 +1,100 @@
-<mat-toolbar color="primary" mat-icon-button>
-  <mat-toolbar-row>
-    <button mat-icon-button>
-      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-    </button>
-    <span class="toolbar-text">Nomads acroyoga</span>
-    <!-- <button mat-icon-button>
-      <mat-icon (click)="sidenav.toggle()">instagram</mat-icon>
-    </button> -->
-  </mat-toolbar-row>
-</mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav #sidenav fixedInViewport="true">
-    <mat-nav-list>
-      <a mat-list-item [routerLink]="'/home'" (click)="sidenav.toggle()">
+<div>
+  <mat-toolbar color="primary" mat-icon-button>
+    <mat-toolbar-row>
+      <button mat-icon-button fxHide fxShow.xs>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <a
+        fxHide.xs
+        [routerLink]="'/home'"
+        style="
+          border-radius: 20px;
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+          vertical-align: middle;
+        "
+      >
+        <img
+          style="width: 40px; height: 40px; border-radius: 20px"
+          src="assets/img/logo-fondo-blanco.png"
+        />
+        &nbsp;
+      </a>
+      <span class="toolbar-text">Nomads acroyoga</span>
+      <span class="fill-space"></span>
+      <button mat-button fxHide.xs [routerLink]="'/home'">
+        <mat-icon class="mr">home</mat-icon>
         Home
-      </a>
-      <a mat-list-item [routerLink]="'/about-us'" (click)="sidenav.toggle()">
+      </button>
+      <button mat-button fxHide.xs [routerLink]="'/about-us'">
+        <mat-icon class="mr">people</mat-icon>
         About us
-      </a>
-      <a mat-list-item [routerLink]="'/our-courses'" (click)="sidenav.toggle()">
+      </button>
+      <button mat-button fxHide.xs [routerLink]="'/our-courses'">
+        <mat-icon class="mr">library_books</mat-icon>
         Our courses
-      </a>
-      <a mat-list-item [routerLink]="'/contact-us'" (click)="sidenav.toggle()">
+      </button>
+      <button mat-button fxHide.xs [routerLink]="'/contact-us'">
+        <mat-icon class="mr">mail</mat-icon>
         Contact us
-      </a>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav fixedInViewport="true">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="'/home'" (click)="sidenav.toggle()">
+          Home
+        </a>
+        <a mat-list-item [routerLink]="'/about-us'" (click)="sidenav.toggle()">
+          About us
+        </a>
+        <a
+          mat-list-item
+          [routerLink]="'/our-courses'"
+          (click)="sidenav.toggle()"
+        >
+          Our courses
+        </a>
+        <a
+          mat-list-item
+          [routerLink]="'/contact-us'"
+          (click)="sidenav.toggle()"
+        >
+          Contact us
+        </a>
 
-      <!-- <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item
+        <!-- <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item
         >Close</a
       > -->
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="scroll-behavior: unset">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div>
+        <router-outlet></router-outlet>
+        <footer class="footer">
+          <div class="footer-bar">
+            <span class="fill-space"></span>
+            <a
+              class="social-icon"
+              target="_blank"
+              href="https://www.facebook.com/Nomadsacroyoga-106517671255662"
+            >
+              <img class="social-icon" src="assets/img/facebook.png" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/nomads.acroyoga">
+              <img class="social-icon" src="assets/img/instagram.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCndHK8hDuwSwD9P88zoNP_g/featured"
+            >
+              <img class="social-icon" src="assets/img/youtube.png" />
+            </a>
+          </div>
+        </footer>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,5 +1,5 @@
 export class Mail {
-  replayTo: string;
+  replyTo: string;
   mailTo: string;
   subject: string;
   body: string;

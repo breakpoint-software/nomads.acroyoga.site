@@ -1,3 +1,8 @@
+.background-container {
+  background-image: none;
+  padding: 0px;
+}
+
 .logo {
   height: calc(100vh - 150px);
   background-image: url(../../../assets/img/logo-transparente.png);
@@ -23,9 +28,10 @@
 .slogam-text {
   font-size: 5em;
   padding-top: 50vh;
-  // bottom: 10px;
   font-family: AndelliaDavilton;
   font-weight: bolder;
   line-height: 1.1;
-  // position: fixed;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }

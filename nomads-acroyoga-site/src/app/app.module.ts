@@ -11,10 +11,11 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import * as data from '../assets/email/credentials.json';
 import { HttpClientModule } from '@angular/common/http';
-import { GoogleApiModule } from 'ng-gapi';
-import { GapiModule } from './gapi.module';
 import { FormsModule } from '@angular/forms';
 import { OurCoursesComponent } from './components/our-courses/our-courses.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +31,9 @@ import { OurCoursesComponent } from './components/our-courses/our-courses.compon
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    GapiModule,
     FormsModule,
+    FlexLayoutModule,
+    NgbModule,
   ],
   providers: [
     // {

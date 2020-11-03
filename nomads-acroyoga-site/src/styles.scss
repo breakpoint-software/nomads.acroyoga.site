@@ -7,9 +7,46 @@ body {
   font-family: "nouvelle vague";
   color: #fef8ea;
   background-position: 100px 5px;
+  overflow: auto;
 }
 .mat-body,
 .mat-body-1,
 .mat-typography {
-  font-family: "nouvelle vague";
+  font-family: "nouvelle vague", sans-serif;
+}
+p,
+span {
+  font-family: "nouvelle vague", sans-serif;
+  font-weight: normal;
+  font-size: 1.4em;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: "nouvelle vague", sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 1.6em;
+  text-align: justify;
+  line-height: 1.2;
+}
+$min_height: calc(100vh - 65px);
+.background-container {
+  background-image: none;
+  background-size: cover;
+  min-height: $min_height;
+  background-attachment: fixed;
+  position: sticky;
+  top: 56px;
+}
+.background-text {
+  min-height: $min_height;
+  padding: 0 30px;
+}
+
+.text-container {
+  background: rgba(227, 164, 159, 0.1);
+  padding: 40px 10px;
+  min-height: $min_height;
 }
