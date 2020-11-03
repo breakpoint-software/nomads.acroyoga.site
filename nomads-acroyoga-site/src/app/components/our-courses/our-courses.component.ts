@@ -11,13 +11,13 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class OurCoursesComponent implements OnInit {
   slides = [
-    { image: '../../../assets/img/our-courses/foto1.jpg' },
-    { image: '../../../assets/img/our-courses/foto2.jpg' },
-    { image: '../../../assets/img/our-courses/foto3.jpg' },
-    { image: '../../../assets/img/our-courses/foto4.jpg' },
-    { image: '../../../assets/img/our-courses/foto5.jpg' },
-    { image: '../../../assets/img/our-courses/foto6.jpg' },
-    { image: '../../../assets/img/our-courses/foto7.jpg' },
+    { image: 'assets/img/our-courses/foto1.jpg' },
+    { image: 'assets/img/our-courses/foto2.jpg' },
+    { image: 'assets/img/our-courses/foto3.jpg' },
+    { image: 'assets/img/our-courses/foto4.jpg' },
+    { image: 'assets/img/our-courses/foto5.jpg' },
+    { image: 'assets/img/our-courses/foto6.jpg' },
+    { image: 'assets/img/our-courses/foto7.jpg' },
   ];
   constructor(
     private deviceDetector: DeviceDetectorService,
