@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Mail } from 'src/app/model/mail';
 import { MailerService } from 'src/app/services/mail/mailer.service';
@@ -15,28 +15,33 @@ export class ContactUsComponent implements OnInit {
   message: string = '';
   subject: string;
   gCredentials = googleCred;
+  loading: boolean;
 
   constructor(
     private mailservice: MailerService,
     private actRoute: ActivatedRoute
   ) {
     this.subject = actRoute.snapshot.params.subject;
+    this.loading = false;
   }
 
-  ngOnInit(): void {
-    // new calendar_v3.Calendar({ })
-    // const oAuth2Client = new google.auth.OAuth2(
-    //   this.gCredentials.web.client_id, this.gCredentials.web.client_secret, '');
-  }
+  ngOnInit(): void {}
 
   sendMail($event) {
+    this.loading = true;
+
     let mail = new Mail();
     mail.name = this.name;
     mail.body = this.message;
     mail.mailTo = 'acroyoga.nomads@gmail.com';
-    mail.replayTo = this.email;
+    mail.replyTo = this.email;
     mail.subject = this.subject;
-    console.log(mail);
-    this.mailservice.sendMail(mail);
+    this.mailservice.sendMail(mail).subscribe((e) => {
+      this.name = '';
+      this.message = '';
+      this.email = '';
+      this.subject = '';
+      this.loading = false;
+    });
   }
 }

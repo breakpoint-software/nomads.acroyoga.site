@@ -9,35 +9,46 @@ $min_height: calc(100vh - 60px);
   text-align: justify;
   line-height: 1.2;
 }
-.therapy-photo {
-  background-image: url(../../../assets/img/therapy-photo.JPG);
-  background-size: contain;
-  height: 146px;
-  width: 220px;
-  background-repeat: no-repeat;
-  display: block;
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
+// .therapy-photo {
+//   background-image: url(../../../assets/img/therapy-photo.JPG);
+//   background-size: contain;
+//   height: 240px;
+//   // max-width: 100%;
+//   width: 320px;
+//   background-repeat: no-repeat;
+//   display: block;
+//   float: left;
+//   margin-right: 20px;
+//   margin-bottom: 20px;
+// }
 .stefania-photo {
   background-image: url(../../../assets/img/textura-solo-imagen.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
-
 .polaroid {
-  border-top: solid 10px;
-  border-left: solid 10px;
-  border-right: solid 10px;
-  border-bottom: solid 30px;
-  border-color: white;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
+.polaroid > img {
+  max-width: 100%;
+  height: auto;
+}
+
+// .polaroid {
+//   border-top: solid 10px;
+//   border-left: solid 10px;
+//   border-right: solid 10px;
+//   border-bottom: solid 30px;
+//   border-color: white;
+// }
 
 .image-description {
   // display: block;
   // float: right;
-  min-height: 200px;
+  min-height: 240px;
   display: block;
 }
 

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="contact-us-container">
   <mat-card class="card-contact">
     <mat-card-header>
       <div mat-card-avatar class=""><mat-icon>email</mat-icon></div>
@@ -43,6 +43,9 @@
         ></textarea>
       </div>
       <button
+        #btnSend
+        [class.spinner]="loading"
+        [disabled]="loading"
         (click)="sendMail($event)"
         [disabled]="!(name != '' && email != '' && message != '')"
       >

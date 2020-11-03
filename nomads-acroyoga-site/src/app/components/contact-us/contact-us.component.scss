@@ -3,22 +3,19 @@ $text: #731c46;
 $invalid: #e91e63;
 $width: 100%;
 $cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
-@media (min-width: 320px) {
-  .container {
-    height: calc(100vh - 150px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background-image: url(../../../assets/img/textura-solo-imagen.jpg);
-    background-size: cover;
-    overflow: auto;
-  }
-  .card-contact {
-    max-width: 750px;
-    width: $width;
-    height: 330px;
-  }
+.contact-us-container {
+  background-image: url(../../../assets/img/textura-solo-imagen.jpg);
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-size: cover;
+}
+.card-contact {
+  max-width: 750px;
+  width: $width;
+  height: 400px;
 }
 
 input::-webkit-input-placeholder,
@@ -145,19 +142,6 @@ button {
   }
 }
 
-/*a {
-  display: inline-block;
-  width: 100%;
-  margin-top: 50px;
-  text-align: center;
-  font-family: 'roboto', sans-serif;
-  text-decoration: none;
-  color: $base;
-  i {
-    margin-right: 5px;
-  }
-}*/
-
 a {
   width: 42px;
   height: 42px;
@@ -184,4 +168,26 @@ a {
       margin-right: 10px;
     }
   }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  border-top-color: #000000;
+  animation: spinner 0.8s linear infinite;
 }

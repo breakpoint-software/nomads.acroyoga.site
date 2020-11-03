@@ -23,15 +23,16 @@
   opacity: 0.8;
   align-items: center;
   text-align: center;
+  display: flex;
 }
 
 .slogam-text {
   font-size: 5em;
-  padding-top: 50vh;
   font-family: AndelliaDavilton;
   font-weight: bolder;
   line-height: 1.1;
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
 }
