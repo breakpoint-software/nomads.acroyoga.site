@@ -2,7 +2,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Mail } from 'src/app/model/mail';
 import { MailerService } from 'src/app/services/mail/mailer.service';
-import * as googleCred from '../../../assets/email/credentials.json';
 
 @Component({
   selector: 'app-contact-us',
@@ -14,7 +13,6 @@ export class ContactUsComponent implements OnInit {
   email = '';
   message: string = '';
   subject: string;
-  gCredentials = googleCred;
   loading: boolean;
 
   constructor(
@@ -22,6 +20,7 @@ export class ContactUsComponent implements OnInit {
     private actRoute: ActivatedRoute
   ) {
     this.subject = actRoute.snapshot.params.subject;
+    this.message = actRoute.snapshot.params.message;
     this.loading = false;
   }
 

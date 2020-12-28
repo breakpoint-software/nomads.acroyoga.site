@@ -2,7 +2,7 @@
     "ApiSettings": [
     {
       "ApiName": "mail",
-      "ApiRoot": "https://localhost:44351/api/email/",
+      "ApiRoot": "https://nomadsmailservice.azurewebsites.net/api/email/",
       "EndPointNames": [
         {
           "Name": "send",
